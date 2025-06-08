@@ -1,5 +1,5 @@
 # This is a Dockerfile, separate from requirements.txt
-FROM python:3.9-slim-buster
+
 
 WORKDIR /app
 
