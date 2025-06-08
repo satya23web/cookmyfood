@@ -1,6 +1,12 @@
 import streamlit as st
 import requests
 import json
+st.set_page_config(
+    page_title="Cook With Me – AI Recipe Finder",
+    page_icon="🍲",
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
 
 # --- Configuration ---
 # Get API key from Streamlit secrets
