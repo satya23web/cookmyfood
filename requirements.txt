@@ -1,13 +1,2 @@
-# This is a Dockerfile, separate from requirements.txt
-
-
-WORKDIR /app
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-EXPOSE 8000 # Adjust if your app uses a different port
-
-CMD ["gunicorn", "app:app"] # Adjust based on your framework and file/instance names
+streamlit
+requests
