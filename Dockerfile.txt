@@ -1,13 +1,20 @@
-# This is a Dockerfile, separate from requirements.txt
-FROM python:3.9-slim-buster
+# Use official Python image
+FROM python:3.10-slim
 
+# Set working directory inside container
 WORKDIR /app
 
+# Copy only requirements file first (for better caching)
 COPY requirements.txt .
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy rest of the app code into the container
 COPY . .
 
-EXPOSE 8000 # Adjust if your app uses a different port
+# Expose the port Streamlit runs on
+EXPOSE 8000
 
-CMD ["gunicorn", "app:app"] # Adjust based on your framework and file/instance names
+# Run the Streamlit app
+CMD ["streamlit", "run", "recipe_app.py", "--server.port=8000", "--server.enableCORS=false"]
