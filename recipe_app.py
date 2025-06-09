@@ -1,9 +1,7 @@
 import streamlit as st
 import requests
 import json
-st.set_page_config(page_title="Recipe Finder", layout="centered")
 
-st.title("🍜 Recipe Finder")
 
 st.set_page_config(
     page_title="Cook With Me – AI Recipe Finder",
@@ -11,6 +9,9 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="expanded"
 )
+st.set_page_config(page_title="Recipe Finder", layout="centered")
+
+st.title("🍜 Recipe Finder")
 
 # --- Configuration ---
 # Get API key from Streamlit secrets
