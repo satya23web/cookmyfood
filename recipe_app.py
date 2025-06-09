@@ -9,6 +9,8 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="expanded"
 )
+st.title("🍲 AI Recipe Finder")
+
 
 # --- Configuration ---
 # Get API key from Streamlit secrets
