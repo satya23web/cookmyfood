@@ -1,6 +1,10 @@
 import streamlit as st
 import requests
 import json
+st.set_page_config(page_title="Recipe Finder", layout="centered")
+
+st.title("🍜 Recipe Finder")
+
 st.set_page_config(
     page_title="Cook With Me – AI Recipe Finder",
     page_icon="🍲",
@@ -48,9 +52,7 @@ def get_recipe_details(recipe_id):
 
 # --- Streamlit UI Layout ---
 
-st.set_page_config(page_title="Python Recipe Finder", layout="centered")
 
-st.title("🍜 Python Recipe Finder")
 
 # Input for recipe name
 recipe_name_input = st.text_input(
